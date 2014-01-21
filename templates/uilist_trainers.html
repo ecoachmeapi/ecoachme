@@ -1,0 +1,15 @@
+<h3>Featured trainers</h3>
+{% for pUIitem in object_list  %}
+    <img src="/static/img/{{ pUIitem.image }}" alt="{{ pUIitem.name }}" title="{{ pUIitem.name }}"/>
+    <div class="trainers gray">
+        <span class="tr-name"><a href="#" onclick="trainer('{{ pUIitem.id }}')">{{ pUIitem.name }}</a></span>
+        <br/>
+        <span>
+            {%for pUIitemWorkout in pUIitem.works.all %}
+            {{ pUIitemWorkout.name }}
+        {%endfor %} trainer
+        </span>
+    </div>
+{% endfor %}
+<a href="#" onclick="allWorkouts()" class="all-link">view all trainers</a>
+

@@ -1,0 +1,52 @@
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/static/js/jqchat.js"></script>
+   <script src="http://static.opentok.com/webrtc/v2.0/js/TB.min.js" ></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $( "#main_chat" ).load("/jqchat/room/{{ trainer.chat_room.id }}/", function( response, status, xhr ) {
+          if ( status == "error" ) {
+            var msg = "Sorry but there was an error: ";
+            $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+          }
+        });
+		InitChatWindow("/jqchat/room/{{ trainer.chat_room.id }}/", null);
+	});
+
+</script>
+<script type="text/javascript">
+
+  var apiKey    = "44400542";
+  var sessionId = "{{  }}";
+  var token     = "T1==cGFydG5lcl9pZD00NDQwMDU0MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz1hYjBmYmM1OWM0MjQ2ZGNlZjhmZGM2ZWFmOTc4ZGJiZGVkY2EwZDhkOnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9Ml9NWDQwTkRRd01EVTBNbjUtVjJWa0lFNXZkaUF4TXlBeE1qbzBPVG95T1NCUVUxUWdNakF4TTM0d0xqazBNRFUzT1ROLSZjcmVhdGVfdGltZT0xMzg0Mzc1NzgxJm5vbmNlPTAuMjQ0Mzg3MjAzNTkxOTI2MjMmZXhwaXJlX3RpbWU9MTM4Njk2Nzc4MSZjb25uZWN0aW9uX2RhdGE9";
+
+  function sessionConnectedHandler (event) {
+     session.publish( publisher );
+     subscribeToStreams(event.streams);
+  }
+  function subscribeToStreams(streams) {
+    for (var i = 0; i < streams.length; i++) {
+        var stream = streams[i];
+        if (stream.connection.connectionId
+               != session.connection.connectionId) {
+            session.subscribe(stream,"mySubscribe",{width:800, height:600});
+        }
+    }
+  }
+  function streamCreatedHandler(event) {
+    subscribeToStreams(event.streams);
+  }
+
+  var publisher = TB.initPublisher(apiKey,"myPublisher",{width:800, height:600});
+  var session   = TB.initSession(sessionId);
+
+  session.connect(apiKey, token);
+  session.addEventListener("sessionConnected",
+                           sessionConnectedHandler);
+  session.addEventListener("streamCreated",
+                           streamCreatedHandler);
+</script>
+<div></div>
+{{ trainer.name }}
+
+<div id="main_chat">
+</div>

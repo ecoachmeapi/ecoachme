@@ -1,0 +1,14 @@
+
+<div class="clearfix">
+
+{% for item in object_list  %}
+    <div class="trainer"><img alt="{{ item.name }}" src="/static/img/{{ item.image_filename }}" title="{{ item.name }}" />
+    <div class="trainers gray"><span class="tr-name"><a href="#" onclick="trainer('{{ item.id }}')">{{ item.name }}</a></span><br />
+    <span>
+        {%for work in item.works.all %}
+            {{ work.name }}
+        {%endfor %}
+        trainer</span></div>
+    </div>
+{% endfor %}
+</div>

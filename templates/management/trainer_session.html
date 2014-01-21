@@ -1,0 +1,81 @@
+
+<script type="text/javascript" src="/static/js/jqchat.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $( "#chatbox-content" ).load("/jqchat/room/{{ trainer.chat_room.id }}/", function( response, status, xhr ) {
+          if ( status == "error" ) {
+            var msg = "Sorry but there was an error: ";
+            $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+          }
+        });
+		InitChatWindow("/jqchat/room/{{ trainer.chat_room.id }}/", null);
+	});
+
+</script>
+<script type="text/javascript">
+
+  var apiKey    = "44400542";
+  var sessionId = "{{ trainer.sess }}";
+  var token     = "{{ trainer.token}}";//"T1==cGFydG5lcl9pZD00NDQwMDU0MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz1hYjBmYmM1OWM0MjQ2ZGNlZjhmZGM2ZWFmOTc4ZGJiZGVkY2EwZDhkOnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9Ml9NWDQwTkRRd01EVTBNbjUtVjJWa0lFNXZkaUF4TXlBeE1qbzBPVG95T1NCUVUxUWdNakF4TTM0d0xqazBNRFUzT1ROLSZjcmVhdGVfdGltZT0xMzg0Mzc1NzgxJm5vbmNlPTAuMjQ0Mzg3MjAzNTkxOTI2MjMmZXhwaXJlX3RpbWU9MTM4Njk2Nzc4MSZjb25uZWN0aW9uX2RhdGE9";
+
+  function sessionConnectedHandler (event) {
+     session.publish( publisher );
+     subscribeToStreams(event.streams);
+  }
+  function subscribeToStreams(streams) {
+    for (var i = 0; i < streams.length; i++) {
+        var stream = streams[i];
+        if (stream.connection.connectionId
+               != session.connection.connectionId) {
+            var newSubscribe = "<div style='margin-top: -18px' id='subs_" + stream.connection.connectionId + "'></div>";
+            $("#tokbox-back").append(newSubscribe);
+            session.subscribe(stream,"subs_" + stream.connection.connectionId ,{width:305, height:190});
+        }
+    }
+  }
+  function streamCreatedHandler(event) {
+    subscribeToStreams(event.streams);
+  }
+
+  var publisher = TB.initPublisher(apiKey,"tokbox",{width:640, height:360});
+  var session   = TB.initSession(sessionId);
+
+  session.connect(apiKey, token);
+  session.addEventListener("sessionConnected",
+                           sessionConnectedHandler);
+  session.addEventListener("streamCreated",
+                           streamCreatedHandler);
+</script>
+<div></div>
+{{ trainer.name }}
+<!--
+<div id="main_chat">
+</div>-->
+
+<section id="content" role="main" class="video">
+    <div id="tokbox">&nbsp;</div>
+    <div id="video-left">
+        <div id="tokbox-back">&nbsp;</div>
+        <div id="social">
+            <div class="button">Rate/Like</div>
+            <div class="button">Comment</div>
+        </div>
+        <div id="social-icons"></div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="chatbox">
+        <div id="chatbox-content"><!--
+            <span class="username">Trainer (Liza Wallace):</span> Hello!<br>
+            <span class="username">Trainer (Liza Wallace):</span> How are you today?<br>
+            <span class="username">You (Emma Collins):</span> Hello!<br>
+            <span class="username">You (Emma Collins):</span> Excellent!<br>
+            <span class="username">You (Emma Collins):</span> Can't wait to get back in shape...<br>
+        </div>
+        <div class="button send">Send</div>
+        <div id="text-area">
+            <textarea>Enter your text here</textarea>-->
+        </div>
+
+    </div>
+</section>
+<div class="clearfix"></div>

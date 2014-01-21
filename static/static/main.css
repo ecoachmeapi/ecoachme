@@ -1,0 +1,582 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #555;
+}
+
+body {
+    font-size: 0.9em;
+    line-height: 1.3;
+    background: url(../img/body-bg.gif) bottom center no-repeat;
+}
+
+::-moz-selection {
+    background: #35bac1;
+    text-shadow: none;
+    color: #fff;
+}
+
+::selection {
+    background: #35bac1;
+    text-shadow: none;
+    color: #fff;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+a {
+    text-decoration: none;
+    color: #37BFC2;
+}
+a:active, a:hover {
+    text-decoration: underline;
+}
+h1, h2, h3 {
+    color: #808080;
+    font-weight: normal;
+}
+#header-topbar {
+    background: #fff;
+    height: 115px;
+    color: #37BFC2;
+    border-bottom: 4px solid #37BFC2;
+}
+
+#header-topbar ul li {
+    list-style: none;
+    list-style-image: none;
+}
+#header-topbar-content, #header-content, #content-wrap, #footer-content {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+#header-content, #content-wrap {
+    background: #fff;
+}
+#content-wrap {
+    padding-bottom: 30px;
+    min-height: 300px;
+}
+#logo {
+    float: left;
+    width: 190px;
+    margin-top: 25px;
+}
+#top-contact-info {
+    float: right;
+    margin: 40px 0 0 100px;
+    padding-left: 30px;
+    background: url(../img/info.png) top left no-repeat;
+}
+#top-contact-info p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #808080;
+}
+#user-menu {
+    font-size: 1.2em;
+    float: right;
+    margin-top: 25px;
+}
+#slogan {
+    color: #999;
+    font-size: 1.4em;
+    height: 90px;
+    padding: 35px 0 0 0;
+}
+#top-navigation, #navigation {
+    height: 50px;
+}
+#top-navigation ul, #navigation ul {
+    margin: 0 -2px 0 -2px;
+    padding: 0;
+}
+#top-navigation ul li {
+    float: left;
+    width: 363px;
+    margin: 0;
+}
+#navigation ul li {
+    float: left;
+    width: 240px;
+    margin: 0;
+}
+#top-navigation ul li.menu-find {
+    width: 235px;
+}
+#top-navigation ul li a, #navigation ul li a {
+    -webkit-box-shadow: inset 0px 5px 10px 0px rgba(128, 128, 128, 0.2);
+    box-shadow: inset 0px 5px 10px 0px rgba(128, 128, 128, 0.2);
+    display: block;
+    line-height: 23px;
+    border: 1px solid #aaa;
+    padding: 5px 20px;
+}
+#top-navigation ul li.menu-find a {
+    display: block;
+    line-height: 23px;
+    background: #37BFC2;
+    border: 1px solid #37BFC2;
+    color: #fff;
+    text-align: center;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#top-navigation ul li.current a, #navigation ul li.current a {
+    border: 1px solid #37BFC2;
+}
+#top-navigation ul li a:hover, #navigation ul li a:hover {
+    text-decoration: none;
+    border: 1px solid #37BFC2;
+}
+
+#top-navigation ul li a, #navigation ul li a {
+    font-size: 1.2em;
+    color: #808080;
+}
+#top-navigation ul li ul {
+    position: absolute;
+    margin: 0;
+    border-left: 1px solid #37BFC2;
+    border-right: 1px solid #37BFC2;
+    border-bottom: 1px solid #37BFC2;
+}
+#top-navigation ul li ul li {
+    float: none;
+}
+#top-navigation ul li ul li a, #top-navigation ul li.current ul li a {
+    border: none;
+    background: #f5f5f5;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#top-navigation ul li ul li a:hover, #top-navigation ul li.current ul li a:hover {
+    border: none;
+    background: #fafafa;
+}
+
+#content-left {
+    float: left;
+    width: 700px;
+    margin-right: 10px;
+}
+#content {
+    float: left;
+    width: 960px;
+    text-align: justify;
+}
+#sidebar-right {
+    float: right;
+    width: 235px;
+    margin: 65px 0 0 0;
+}
+#sidebar-right h1, #sidebar-right h2, #sidebar-right h3 {
+    background: #35bac1;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0px;
+}
+a.all-link {
+    padding: 5px 20px;
+    display: block;
+    color: #fff;
+    font-size: 1.1em;
+    background: #35bac1 url(../img/arrow.png) right center no-repeat;
+}
+
+#sidebar-right section {
+    margin: 0 0 15px 0;
+}
+.gray {
+    background: #001925;
+}
+.green {
+    background: #35bac1;
+}
+.trainers.gray {
+    background: #001925 url(../img/arrow.png) right center no-repeat;
+}
+#tokbox-main {
+    width: 700px;
+    height: 395px;
+    background: url(../img/tokbox.jpg) 0 0 no-repeat;
+}
+#header-content-video {
+    font-size: 1.3em;
+    margin: 40px 0;
+}
+#tokbox {
+    width: 640px;
+    height: 360px;
+    background: url(../img/tokbox-video.jpg) 0 0 no-repeat;
+    float: left;
+    margin-right: 15px;
+}
+.video-right {
+    width: 305px;
+    float: left;
+}
+#tokbox-back {
+    width: 305px;
+    height: 172px;
+    background: url(../img/tokbox-video-back.jpg) 0 0 no-repeat;
+    float: left;
+}
+#social {
+    float: left;
+    margin: 40px 0 25px 10px;
+}
+#social-icons {
+    width: 270px;
+    height: 24px;
+    background: url(../img/temp-social-icons.png) 0 0 no-repeat;
+    float: left;
+    margin-left: 15px;
+}
+.workouts {
+    padding: 5px 20px;
+    color: #fff;
+}
+.workouts span {
+    margin-left: 10px;
+    font-size: 1.4em;
+}
+.trainers {
+    padding: 5px 20px;
+    color: #fff;
+}
+.tr-name {
+    font-size: 1.4em;
+}
+article {
+    text-align: justify;
+}
+footer {
+    background: #e8e8e8;
+}
+footer a {
+    color: #888;
+}
+#footer-content ul {
+    margin: 0;
+    padding: 40px 0 80px 0;
+}
+#footer-content ul li {
+    float: left;
+    width: 230px;
+    text-align: center;
+}
+
+#chatbox {
+    background: #e8e8e8;
+    margin: 20px 0;
+    border: 1px solid #808080;
+    height: 320px;
+    padding: 20px;
+}
+#chatbox-content {
+    height: 220px;
+}
+#chatbox-content .username {
+    color: #35bac1;
+}
+#text-area {
+    margin-right: 125px;
+}
+#text-area textarea {
+    display: block;
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+}
+.button {
+    background: #35bac1;
+    text-align: center;
+    padding: 5px 15px 5px 15px;
+    color: #fff;
+    margin: 5px;
+    width: 100px;
+    float: left;
+}
+.button.send {
+    background: #35bac1 url(../img/arrow.png) right center no-repeat;
+    text-align: left;
+    float: right;
+    padding: 5px 55px 5px 15px;
+    margin-top: 80px;
+    width: 30px;
+}
+.onethird {
+    float: left;
+    width: 33%;
+}
+.blue {
+    color: #35bac1;
+}
+.rating {
+    background: url(../img/rating.jpg) right center no-repeat;
+    width: 200px;
+    line-height: 57px;
+}
+.section-left {
+    float: left;
+    width: 235px;
+    border-top: 10px solid #35bac1;
+    margin: 30px 20px 0 0;
+}
+.section-right {
+    float: left;
+    width: 705px;
+    margin: 10px 0 0 0;
+}
+#alltrainers h3, #allworkouts h3 {
+    background: #35bac1;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: 20px 0 40px 0;
+    text-align: center;
+    letter-spacing: 0px;
+}
+.trainer {
+    width: 216px;
+    float: left;
+    margin: 15px;
+    border-top: 10px solid #35bac1;
+}
+.trainer img {
+    width: 216px;
+}
+
+#alltrainers {
+    margin: 0 -15px 40px -15px;
+}
+#alltrainers a.all-link {
+    float: right;
+    width: 180px;
+    margin-right: 2px;
+}
+
+a.all-link.join {
+    float: right;
+    width: 300px;
+}
+
+.workout {
+    float: left;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 170px;
+}
+.workout img {
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+.workout img:hover {
+    -webkit-box-shadow:  2px 2px 7px 1px rgba(0, 0, 0, 0.7);
+    box-shadow:  2px 2px 7px 1px rgba(0, 0, 0, 0.7); 
+}
+.workout .w-name {
+    color: #35bac1;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+#allworkouts a.all-link {
+    float: right;
+    width: 180px;
+}
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

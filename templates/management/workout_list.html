@@ -1,0 +1,30 @@
+<section id="content" role="main">
+<div id="allworkouts">
+<div class="clearfix">
+
+{% for item in object_list  %}
+    <div class="workout"><img alt="{{ item.name }}" src="/static/img/{{ item.imageico_filename }}" title="{{ item.name }}" />
+    <div class="w-name"><a href="#" onclick="workout('{{ item.id }}')">{{ item.name }}</a></div>
+    </div>
+{% endfor %}
+
+
+</div>
+</div>
+
+<nav id="navigation" role="navigation">
+<ul>
+	<li class="menu-spec current"><a href="#">Trainer Specialty</a></li>
+	<li class="menu-style"><a href="#">Trainer Style</a></li>
+	<li class="menu-other"><a href="#">Other filter</a></li>
+	<li class="menu-ratings"><a href="#">Ratings</a></li>
+</ul>
+</nav>
+
+<div style="margin-bottom: 20px">&nbsp;</div>
+<script>
+    $( document ).ready(function() { alltrainers("alltrainers");});
+</script>
+<div id="alltrainers">
+</div>
+</section>

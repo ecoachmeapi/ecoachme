@@ -1,0 +1,7 @@
+  <h3>Spotlight workout</h3>
+{% for pUIitem in object_list  %}
+    <img alt="yoga" src="/static/img/{{ pUIitem.image_filename }}" title="{{ pUIitem.name }}">
+    <div class="workouts gray"><img alt="{{ pUIitem.name }}" src="/static/img/{{ pUIitem.imagesm_filename }}">
+        <span><a href="#" onclick="workout('{{ pUIitem.id }}')">{{ pUIitem.name }}</a></span></div>
+{% endfor %}
+<a href="#" class="all-link" onclick="allWorkouts()">view all workouts</a>

@@ -1,0 +1,31 @@
+
+<section id="content" role="main">
+<div class="clearfix">
+<div class="section-left"><img alt="{{ workout.name }}" src="/static/img/{{ workout.image_filename }}" title="{{ workout.name }}" />
+<div class="workouts gray"><img alt="{{ workout.name }}" src="/static/img/{{ workout.imagesm_filename }}" /><span>{{ workout.name }}</span></div>
+</div>
+
+<div class="section-right clear">
+    {% autoescape off %}
+        {{ workout.info }}
+     {% endautoescape %}
+</div>
+</div>
+
+<div id="alltrainers">
+<h3>Trainers doing &laquo;{{ workout.name }}&raquo; workout</h3>
+
+<div class="clearfix">
+    {%for trainer in workout.trainers %}
+        <div class="trainer"><img alt="wallace" src="/static/img/{{ trainer.image_filename }}" title="{{ trainer.name }}" />
+        <div class="trainers gray"><span class="tr-name"><a href="#" onclick="trainer('{{ trainer.id }}')">{{ trainer.name }}</a></span><br />
+        <span>
+            {%for work in trainer.works.all %}
+                {{ work.name }}
+            {%endfor %}
+            trainer</span></div>
+        </div>
+    {%endfor %}
+</div>
+<a class="all-link" href="#"  onclick="allWorkouts()">view all trainers</a></div>
+</section>

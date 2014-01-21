@@ -1,0 +1,56 @@
+	/* Example styling for the chat window */
+   #chatwindow {
+     height: 250px;
+     width: 400px;
+     border: 1px solid;
+     padding: 5px;
+     margin: 10px 0;
+     overflow: auto;
+     background-color: white;
+   }
+#howitworks {
+    float: left;
+    display: block;
+}
+#spotworkout {
+    float: right;
+    display: block;
+}
+#featuredtrainers {
+    float: right;
+    clear: right;
+    display: block;
+}
+#header {
+    height: 30px;
+}
+#footer {
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    vertical-align: text-top;
+}
+body {
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+ul.navlist li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+a.linkPopup {
+    /*cursor: crosshair;*/
+}
+div.hContent {
+    display: none;
+}
+div {
+    border-bottom:  solid 2px black;
+    border-top:   solid 2px black;
+    border-left:   solid 2px black;
+    border-right:   solid 2px black;
+
+}

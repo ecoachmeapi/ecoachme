@@ -1,0 +1,16 @@
+<footer>
+            <div id="footer-content">
+                <nav id="bottom-navigation">
+                    <ul>
+                        {% for pUIitem in object_list  %}
+                            <li><a href="#" onclick="return linkclick(this)">{{ pUIitem.title }}</a>
+                                <!--<div class="hContent">
+                                    {{ pUIitem.content }}
+                                </div>-->
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+

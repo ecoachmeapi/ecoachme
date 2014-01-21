@@ -1,0 +1,41 @@
+{# An example chat window #}
+<!--
+{% block head_title %}Chat Client{% endblock %}
+-->
+{% block extra_head %}
+<!-- Load the JS for the chat window and start retrieving messages. -->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/static/js/jqchat.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		InitChatWindow("/jqchat/room/{{ room.id }}/ajax/", null);
+	});
+</script>
+<style type="text/css">
+	/* Example styling for the chat window */
+   #chatwindow {
+     height: 250px;
+     width: 400px;
+     border: 1px solid;
+     padding: 5px;
+     margin: 10px 0;
+     overflow: auto;
+     background-color: white;
+   }
+</style>
+{% endblock %}
+
+{% block body %}
+<!--
+<h2>Room name: {{ room }}</h2>
+-->
+<div id="chatwindow"><span id="loading">Loading...</span></div>
+
+<form method="post" id="chatform" action=/jqchat/room/{{ room.id }}/?csrfmiddlewaretoken={{ csrf_token }}">
+	<label><input type="text" style="width: 50pc;" placeholder="Enter your text here" id="msg" /><input type="submit" class="button send" value="Send" /></label>
+    <input type="hidden" id="csrfmiddlewaretoken" name="csrfmiddlewaretoken" value="{{ csrf_token }}" />
+</form>
+
+<script type="text/javascript">document.getElementById("msg").focus();</script>
+
+{% endblock %}

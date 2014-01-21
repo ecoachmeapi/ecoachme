@@ -1,0 +1,60 @@
+.hour_message_chat {
+    display: none;
+    visibility: hidden;
+
+}
+#chatwindow {
+    border: 0px !important;
+    background-color: #e8e8e8 !important;
+}
+.button send {
+   cursor: hand;
+   margin-top: -7px !important;
+}
+.trainer {
+   color: #fff;
+}
+.detail {
+    color: #999;
+    position: relative;
+}
+.traineravatar{
+   color: #fff;
+   float: left;
+   position: relative;
+}
+.trainername {
+    color: #999;
+}
+.workname img {
+   height: 150px;
+   width: 150px;
+}
+.bio {
+   color: #999;
+   float: left;
+   position: relative;
+}
+.foto {
+   color: #fff;
+   position: relative;
+}
+.work {
+    clear: left;
+}
+.workname{
+    float: left;
+    text-align: center;
+}
+.featuredworkout{
+    color: #999;
+    text-align: center;
+}
+.featuredworkout a{
+    color: #999!important;
+    text-align: center;
+}
+.clear_both{
+    clear: both;
+    margin-bottom: 50px;
+}

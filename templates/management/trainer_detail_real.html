@@ -1,0 +1,27 @@
+<div class="trainer">
+    <div class="traineravatar">
+    <div class="trainer detail trainername">{{  trainer.name }}</div>
+    <div class="trainer detail foto">
+        <img src="/static/img/{{ trainer.image_filename }}">
+    </div>
+    </div>
+    <div class="trainer detail bio">
+        {% autoescape off %}
+            {{ trainer.info }}
+        {% endautoescape %}
+
+    </div>
+
+     <div class="trainer detail work">
+        Trainer's workouts:<br />
+         <div class="trainer detail worklist">
+            {%for work in trainer.works.all %}
+                <div class="trainer detail workname">
+                    <img src="/static/img/{{ work.image_filename }}"><br />
+                    {{ work.name }}
+                </div>
+            {%endfor %}
+          </div>
+      </div>
+</div>
+<div class="clear_both"></div>
